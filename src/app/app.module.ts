@@ -15,6 +15,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StockFormComponent } from './stock/stock-form/stock-form.component';
+import {StockService} from "./stock/stock.service";
 
 //路由配置
 const routeConfig: Routes = [
@@ -43,7 +44,7 @@ const routeConfig: Routes = [
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [],  //声明模块里的服务
+  providers: [StockService],  //声明模块里的服务
   bootstrap: [AppComponent]  //根组件
 })
 export class AppModule { }
